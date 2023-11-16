@@ -1,0 +1,482 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>League of Nations - Timeline</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.question-button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const questionBody = this.parentElement.querySelector('.question-body');
+                        questionBody.style.display = 'block';
+                        this.style.display = 'none';
+                        const paragraph = this.parentElement.parentElement.querySelector('.timeline-body');
+                        paragraph.style.opacity = 0;
+                        const carousel = this.parentElement.parentElement.querySelector('.timeline-carousel');
+                        carousel.style.opacity = 0;
+                    })
+                })
+                document.querySelectorAll('.incorrect-button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const questionBody = this.parentElement;
+                        const answerText = questionBody.querySelector('.answer-text');
+                        if (answerText.style.opacity == 0)
+                        {
+                            answerText.style.opacity = 1;
+                            this.style.backgroundColor = 'red';
+                        }
+                        questionBody.parentElement.parentElement.querySelector('.timeline-body').style.opacity = 1;
+                        questionBody.parentElement.parentElement.querySelector('.timeline-carousel').style.opacity = 1;
+                    })
+                })
+                document.querySelectorAll('.correct-button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const questionBody = this.parentElement;
+                        const answerText = questionBody.querySelector('.answer-text');
+                        if (answerText.style.opacity == 0)
+                        {
+                            answerText.textContent = 'Correct!';
+                            answerText.style.color = 'green';
+                            answerText.style.opacity = 1;
+                            this.style.backgroundColor = 'green';
+                        }
+                        questionBody.parentElement.parentElement.querySelector('.timeline-body').style.opacity = 1;
+                        questionBody.parentElement.parentElement.querySelector('.timeline-carousel').style.opacity = 1;
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="jumbotron" style="text-align: center; padding: 3rem; background-color: white; color: #0f0f0f;">
+            <h1 style="font-size: 50; font-weight: 700;">League of Nations - Timeline</h1>
+            <hr>
+            <h3>Welcome to a showcase of 20 events from the League of Nations' surprisingly short lifetime, ranging from the year 1920 to 1939.</h3>
+        </div>
+        <div class="timeline">
+            <br>
+            <div class="container-timeline left">
+                <div class="content">
+                    <button class="timeline-event d-inline-flex gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#corfu-incident" aria-expanded="false" aria-controls="collapseExample" style="text-align: right; width: 100%">
+                        <strong>1923:</strong> The Corfu Incident (S. P.)
+                    </button>
+                    <div class="collapse" id="corfu-incident" style="width: 100%;">
+                        <div class="d-block card card-body" style="width: 100%; min-height: 1rem;">
+                            <h2>Italy/Corfu: <em>Powerless, Overshadowed</em></h2>
+                            <hr>
+                            <div class="timeline-carousel d-block" style="float: right; width: 50%;">
+                                <div id="corfu-incident-c" class="carousel slide" style="width: 100%;">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#corfu-incident-c" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#corfu-incident-c" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/corfu-incident/corfu_incident1.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source"><em>
+                                                    Image provided by The Montreal Gazette or 'The Gazette'
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/corfu-incident/corfu_incident2.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by the Rochester Evening Journal and the Post Express
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#corfu-incident-c" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#corfu-incident-c" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="timeline-body">
+                                After WW1, the border between Greece and Albania was redrawn. Enrico Tellini, an Italian general, had the job of patrolling it. In August
+                                of 1923, Tellini and a few other Italian soldiers were murdered on the border. This led the current Italian leader, Benito Mussolini, to
+                                demand 50 million lira (which would today be around $1,750,000) from Greece as compensation, but Greece refused to pay (and also refused to
+                                accept some of Mussolini’s other terms). In response, <a class="source-highlight" href="https://www.historyireland.com/ireland-corfu-crisis-1923/" target="new">Italy invaded and bombarded Corfu</a>, and Greece appealed to the League of Nations for
+                                help. Italy would not accept the League’s demand for it to leave Corfu, nor would Britain and France agree on how to take further action
+                                against Italy, so the matter would eventually be passed to the Conference of Ambassadors, which would eventually rule that Italy would leave
+                                Corfu, but it also stated that Greece would have to pay. Italy, in the end, won.
+                            </p>
+                            <div class="question">
+                                <button class="question-button" type="button">Begin question</button>
+                                <div class="question-body" style="display: none;">
+                                    <h3>What was the name of the Italian general that was assasinated, causing the Corfu incident?</h2>
+                                    <hr>
+                                    <button class="incorrect-button">Benito Mussolini</button>
+                                    <button class="incorrect-button">Giuseppe Mazzini</button>
+                                    <button class="incorrect-button">Dante Alighieri</button>
+                                    <button class="correct-button">Enrico Tellini</button>
+                                    <hr>
+                                    <h4 class="answer-text" style="color: red; opacity: 0;">Incorrect! Enrico Tellini was the one who was killed.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-timeline left">
+                <div class="content">
+                    <button class="timeline-event d-inline-flex gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#locarno-treaties" aria-expanded="false" aria-controls="collapseExample" style="text-align: right; width: 100%">
+                        <strong>1935:</strong> The Locarno Treaties (C. S.)
+                    </button>
+                    <div class="collapse" id="locarno-treaties" style="width: 100%;">
+                        <div class="d-block card card-body" style="width: 100%; min-height: 1rem;">
+                            <h2>The Locarno Treaties: <em>A step towards the future</em></h2>
+                            <hr>
+                            <div class="timeline-carousel d-block" style="float: right; width: 50%;">
+                                <div id="locarno-treaties-c" class="carousel slide" style="width: 100%;">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#locarno-treaties-c" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#locarno-treaties-c" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/manchuria/manchuria1.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by John D. Clare, made by an anonymous illustrator in 1933
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/manchuria/manchuria2.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by John D. Clare, illustrated by David Low in 1933
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#locarno-treaties-c" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#locarno-treaties-c" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="timeline-body">
+                                Signed in Locarno, Switzerland, in 1925, the Locarno Treaties aimed to stabilize post-World War I Europe by securing territorial
+                                boundaries and fostering reconciliation among major powers. The Treaty of Mutual Guarantee, involving Germany, France, Belgium,
+                                Italy, and Britain, committed to peaceful dispute resolution and mutual defense. According to Eduqa Scott titled by Tutor2u “These
+                                treaties recognized Germany's western borders and promoted arbitration between Germany and Poland, and Germany and Czechoslovakia.” While
+                                initially reducing tensions and fostering stability in the late 1920s, the treaties faced limitations, particularly in addressing broader
+                                security concerns and the League of Nations' shortcomings. Ultimately, they failed to prevent the outbreak of World War II amidst rising
+                                nationalism and economic challenges.
+                            </p>
+                            <div class="question">
+                                <button class="question-button" type="button">Begin question</button>
+                                <div class="question-body" style="display: none;">
+                                    <h3>What did the League do to see if Japan was violating international law?</h2>
+                                    <hr>
+                                    <button class="incorrect-button">Send lookouts and spies into Manchukuo</button>
+                                    <button class="incorrect-button">Infiltrate their government</button>
+                                    <button class="correct-button">Dispatch a new special commission for that task</button>
+                                    <button class="incorrect-button">Look through their recent records</button>
+                                    <hr>
+                                    <h4 class="answer-text" style="color: red; opacity: 0;">Incorrect! The League established the Lytton Commission, which ended up ruling that Japan had violated international law.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-timeline left">
+                <div class="content">
+                    <button class="timeline-event d-inline-flex gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#manchuria" aria-expanded="false" aria-controls="collapseExample" style="text-align: right; width: 100%">
+                        <strong>1931-1933:</strong> The Manchuria Crisis (C. S.)
+                    </button>
+                    <div class="collapse" id="manchuria" style="width: 100%;">
+                        <div class="d-block card card-body" style="width: 100%; min-height: 1rem;">
+                            <h2>The Mukden Incident: <em>No authority</em></h2>
+                            <hr>
+                            <div class="timeline-carousel d-block" style="float: right; width: 50%;">
+                                <div id="manchuria-c" class="carousel slide" style="width: 100%;">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#manchuria-c" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#manchuria-c" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/manchuria/manchuria1.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by John D. Clare, made by an anonymous illustrator in 1933
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/manchuria/manchuria2.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by John D. Clare, illustrated by David Low in 1933
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#manchuria-c" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#manchuria-c" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="timeline-body">
+                                The Manchurian Crisis, also known as the Mukden Incident, unfolded in 1931 when the Japanese Kwantung Army orchestrated a staged explosion near
+                                a railway in Manchuria, providing a pretext to invade. The military swiftly took control, establishing the puppet state of Manchukuo. In response,
+                                the League of Nations dispatched the Lytton Commission, which found Japan in violation of international law. Despite the report recommending
+                                Manchuria's return to China, Japan rejected the League's conclusions and withdrew in 1933. This crisis underscored the League's incapacity to prevent
+                                aggression, dealt a blow to its authority, and set a precedent for subsequent acts of aggression. According to Kenneth Pletcher titled by Britannica
+                                “The League's failure to curb Japanese aggression revealed its limitations in enforcing collective security, contributing significantly to its decline
+                                and the onset of World War II.
+                            </p>
+                            <div class="question">
+                                <button class="question-button" type="button">Begin question</button>
+                                <div class="question-body" style="display: none;">
+                                    <h3>What did the League do to see if Japan was violating international law?</h2>
+                                    <hr>
+                                    <button class="incorrect-button">Send lookouts and spies into Manchukuo</button>
+                                    <button class="incorrect-button">Infiltrate their government</button>
+                                    <button class="correct-button">Dispatch a new special commission for that task</button>
+                                    <button class="incorrect-button">Look through their recent records</button>
+                                    <hr>
+                                    <h4 class="answer-text" style="color: red; opacity: 0;">Incorrect! The League established the Lytton Commission, which ended up ruling that Japan had violated international law.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-timeline right">
+                <div class="content">
+                    <button class="timeline-event d-inline-flex gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#geneva-conference" aria-expanded="false" aria-controls="collapseExample" style="text-align: right; width: 100%">
+                        <strong>1932-1934:</strong> The Geneva Conference (S. P.)
+                    </button>
+                    <div class="collapse" id="geneva-conference" style="width: 100%;">
+                        <div class="d-block card card-body" style="width: 100%; min-height: 1rem;">
+                            <h2>The World Disarmament Conference: <em>The opposite effect</em></h2>
+                            <hr>
+                            <div class="timeline-carousel d-block" style="float: right; width: 50%;">
+                                <div id="world-disarmament-conference-c" class="carousel slide" style="width: 100%;">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#world-disarmament-conference-c" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#world-disarmament-conference-c" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/world-disarmament-conference/world_disarmament_conference1.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by Encyclopedia Britannica & the Smith Archive/Alamy
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/world-disarmament-conference/world_disarmament_conference2.jpg" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by the League of Nations Archives, Library of the United Nations Office at Geneva
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#world-disarmament-conference-c" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#world-disarmament-conference-c" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="timeline-body">
+                                After the Locarno Pact of 1925, the League of Nations set up a preparatory commission to prepare for a Disarmament Conference to be held
+                                in Geneva. During the meetings, the idea of German equality surged, and the German chancellor proposed their rearmament as a solution,
+                                and later his death and the surge of the Nazi party only further boosted this idea. When the Conference for the Reduction and Limitation of Armaments actually took
+                                place in February of 1932, the question of German equality dominated all others and Germany would be unsatisfied when the conference would
+                                be paused in July, so they chose to withdraw from negotiations. Other powerful countries sparked a promise to give Germany equality, and
+                                the conference resumed soon after in February of 1933, but, although there were other, more powerful countries against German rearmament,
+                                fear and mistrust caused by Adolf Hitler’s rise to power made it harder for the conference to progress, and Italy ended up siding with
+                                Germany, creating a pact that would, <a class="source-highlight" href="https://www.britannica.com/event/Italo-Ethiopian-War-1935-1936t" target="new">according to Walter A. McDougall from Encyclopedia Britannica,</a> “grant Germany equality, revise the
+                                peace treaties, and establish a four-power directorate to resolve international disputes.” The pact was eventually signed and Germany
+                                began arming shortly after, and the conference was soon abandoned in 1934, shutting down further prospects of disarmament.
+                            </p>
+                            <div class="question">
+                                <button class="question-button" type="button">Begin question</button>
+                                <div class="question-body" style="display: none;">
+                                    <h3>What was the Geneva Conference's official name?</h2>
+                                    <hr>
+                                    <button class="incorrect-button">World Disarmament Conference</button>
+                                    <button class="correct-button">Conference for the Reduction and Limitation of Armaments</button>
+                                    <button class="incorrect-button">Geneva Conference for the Reduction of Armaments</button>
+                                    <button class="incorrect-button">League of Nations Conference for the Reduction of Arms</button>
+                                    <hr>
+                                    <h4 class="answer-text" style="color: red; opacity: 0;">Incorrect! It was the Conference for the Reduction and Limitation of Armaments.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-timeline left">
+                <div class="content">
+                    <button class="timeline-event d-inline-flex gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#abyssinia" aria-expanded="false" aria-controls="collapseExample" style="text-align: right; width: 100%">
+                        <strong>1935-1936:</strong> The Abyssinia Crisis (S. P.)
+                    </button>
+                    <div class="collapse" id="abyssinia" style="width: 100%;">
+                        <div class="d-block card card-body" style="width: 100%; min-height: 1rem;">
+                            <h2>The Italo-Ethiopian War: <em>Nothing they could do</em></h2>
+                            <hr>
+                            <div class="timeline-carousel d-block" style="float: right; width: 50%;">
+                                <div id="abyssinia-c" class="carousel slide" style="width: 100%;">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#abyssinia-c" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#abyssinia-c" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/abyssinia/abyssinia1.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by John D. Clare and GCSE History
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/abyssinia/abyssinia2.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by John D. Clare and IGCSE History
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#abyssinia-c" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#abyssinia-c" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="timeline-body">
+                                Previously, in the 1980s, Italy had attempted to conquer Abyssinia (now Ethiopia) but failed, and Abyssinia was, in 1934,
+                                now one of the only countries left in Africa that wasn’t under European rule. However, a border dispute between Abynissia and
+                                Italian Somaliland (an Italian colony in Africa) gave the current Italian dictator, Benito Mussolini, an excuse to get involved.
+                                After refusing multiple arbitration (when an entity oversees and regulates a dispute, like how an arbiter regulates a football
+                                match) offers, Mussolini decided to invade Abyssinia on October 3, 1935. The Italian invaders pushed back the insufficiently-armed
+                                Ethiopian troops and would soon conquer the capital less than half a year later. The League of Nations morally condemned Italy’s
+                                actions, but Mussolini ignored it and pushed forward. The League later voted to impose economic sanctions on them, but they were
+                                ineffective because the major powers were not interested in opposing Italy. <a class="source-highlight" href="https://www.britannica.com/event/Italo-Ethiopian-War-1935-1936" target="new">According to the Encyclopedia Britannica</a>, the conflict
+                                “contributed to international tensions between the fascist states (like Italy) and the Western democracies, and served as a rallying
+                                point, especially after World War II, for developing African nationalist movements.” Finally, <a class="source-highlight" href="https://www.johndclare.net/league_of_nations6b.htm" target="new">as said by the historian AP Adamthwaite</a>, "the Abyssinian crisis delivered a death blow to the League."
+                            </p>
+                            <div class="question">
+                                <button class="question-button" type="button">Begin question</button>
+                                <div class="question-body" style="display: none;">
+                                    <h3>What measure did the League of Nations attempt to use against Italy? (there are multiple answers)</h2>
+                                    <hr>
+                                    <button class="correct-button">Economic Sanctions</button>
+                                    <button class="incorrect-button">Military Threats</button>
+                                    <button class="correct-button">Moral Condemnation</button>
+                                    <button class="incorrect-button">Removal from the League</button>
+                                    <hr>
+                                    <h4 class="answer-text" style="color: red; opacity: 0;">Incorrect! The League used economic sanctions and moral condemnation.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-timeline right">
+                <div class="content">
+                    <button class="timeline-event d-inline-flex gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#rhineland" aria-expanded="false" aria-controls="collapseExample" style="text-align: right; width: 100%">
+                        <strong>1935-1936:</strong> The Remilitarization of the Rhineland (S. P.)
+                    </button>
+                    <div class="collapse" id="rhineland" style="width: 100%;">
+                        <div class="d-block card card-body" style="width: 100%; min-height: 1rem;">
+                            <h2>The Remilitarization of the Rhineland: <em>Treaty no more</em></h2>
+                            <hr>
+                            <div class="timeline-carousel d-block" style="float: right; width: 50%;">
+                                <div id="rhineland-c" class="carousel slide" style="width: 100%;">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#rhineland-c" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#rhineland-c" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="images/rhineland/rhineland1.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source" ><em>
+                                                    Image provided by Punch Limited
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="images/rhineland/rhineland2.jpg" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p class="image-source"><em>
+                                                    Image provided by the British National Archives
+                                                </em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#rhineland-c" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#rhineland-c" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="timeline-body">
+                                Ever since the Treaty of Versailles was signed, the Rhineland had been taken away from Germany and was demilitarized as stated in the treaty’s
+                                terms. After 1933, however, other nations began to worry about their safety with Germany after Adolf Hitler became its chancellor, and he’d frequently
+                                voiced that he would stop at nothing to abolish the Treaty of Versailles. In 1935, France signed a treaty of friendship with the USSR, and Germany claimed
+                                it was hostile against them and Hitler used this to send German troops into the Rhineland in March 1936, which violated the Treaty of Versailles’
+                                and Locarno Treaties’ terms. Even after negotiations, Hitler refused to withdraw his troops and put pressure on the League of Nations to act, and
+                                it was unable to. France was in the middle of elections, and, <a class="source-highlight" href="https://www.nationalarchives.gov.uk/education/resources/german-occupation/" target="new">as the British National Archives pointed out,</a> "Britain thought that the Treaty was too harsh against Germany, leading them to do nothing."
+                                Hitler would eventually move on from the occupation of the Rhineland, soon seizing other territories until he reached Poland in September 1939.
+                            </p>
+                            <div class="question">
+                                <button class="question-button" type="button">Begin question</button>
+                                <div class="question-body" style="display: none;">
+                                    <h3>What did Germany take advantage of in order to occupy the Rhineland?</h2>
+                                    <hr>
+                                    <button class="incorrect-button">The USSR invading a country nearby</button>
+                                    <button class="incorrect-button">France occupying the Rhineland themselves</button>
+                                    <button class="correct-button">A friendship treaty between France and the USSR</button>
+                                    <button class="incorrect-button">Britain withdrawing from the Rhineland</button>
+                                    <hr>
+                                    <h4 class="answer-text" style="color: red; opacity: 0;">Incorrect! Germany was provoked by a friendship treaty being signed between France and the USSR?</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
