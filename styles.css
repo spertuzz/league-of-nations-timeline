@@ -71,6 +71,7 @@ p {
 }
 
 .carousel-caption {
+    position: absolute;
     bottom: 0px;
 }
 
