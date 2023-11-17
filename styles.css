@@ -71,7 +71,9 @@ p {
 }
 
 .carousel-caption {
-    top: 60%;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
 /* Timeline Styles */
