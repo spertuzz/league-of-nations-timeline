@@ -34,6 +34,10 @@ p {
     background_color: #dfdfdf;
 }
 
+.timeline-carousel {
+    padding: 1rem 1rem 1rem 1rem;
+}
+
 .source-highlight {
     text-decoration: underline;
     text-decoration-color: yellow;
