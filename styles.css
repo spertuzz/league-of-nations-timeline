@@ -46,6 +46,14 @@ p {
     font-weight: 500;
 }
 
+.references-highlight {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    background-color: rgba(255, 255, 0, 0.3);
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
 .source-highlight:hover {
     color: #5c5c00;
 }
