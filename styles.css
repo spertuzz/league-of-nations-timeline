@@ -46,6 +46,10 @@ p {
     font-weight: 500;
 }
 
+.source-highlight:hover {
+    color: #5c5c00;
+}
+
 .references-highlight {
     text-decoration: underline;
     text-decoration-color: yellow;
@@ -54,8 +58,8 @@ p {
     font-weight: 500;
 }
 
-.source-highlight:hover {
-    color: #5c5c00;
+.references-highlight:hover {
+    color: #e0e0e0;
 }
 
 .image-source {
