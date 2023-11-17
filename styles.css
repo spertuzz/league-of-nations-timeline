@@ -22,6 +22,10 @@ p, div {
     transition: opacity 0.5s ease-in-out;
 }
 
+p {
+    padding: 1rem 1rem 1rem 1rem;
+}
+
 .timeline-event {
     background_color: #dfdfdf;
 }
