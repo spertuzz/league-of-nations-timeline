@@ -70,6 +70,10 @@ p {
     padding: 0 0 0 0;
 }
 
+.carousel-captions {
+    top: 90%;
+}
+
 /* Timeline Styles */
 * {
     box-sizing: border-box;
